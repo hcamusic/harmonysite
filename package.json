@@ -1,0 +1,34 @@
+{
+  "name": "harmonysite",
+  "version": "1.0.0",
+  "description": "Harmony Site Client",
+  "main": "src/index.js",
+  "repository": "git@github.com:hcamusic/harmonysite.git",
+  "author": "Michael Barlock <barlockm@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node examples/getMembers.js"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "csv-parse": "^4.12.0",
+    "lodash": "^4.17.19",
+    "qs": "^6.9.4",
+    "tough-cookie": "^4.0.0"
+  },
+  "devDependencies": {
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11",
+    "prettier": "^2.0.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*": [
+      "prettier --write"
+    ]
+  }
+}
