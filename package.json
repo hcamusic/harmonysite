@@ -1,25 +1,45 @@
 {
   "name": "harmonysite",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Harmony Site Client",
   "main": "src/index.js",
   "repository": "git@github.com:hcamusic/harmonysite.git",
   "author": "Michael Barlock <barlockm@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "node examples/getMembers.js"
+    "start": "ts-node examples/get-members.ts",
+    "lint": "yarn type && yarn eslint",
+    "eslint": "eslint . --ext .ts,.js",
+    "type": "tsc --noEmit"
   },
   "dependencies": {
-    "axios": "^0.19.2",
-    "csv-parse": "^4.12.0",
-    "lodash": "^4.17.19",
-    "qs": "^6.9.4",
+    "@types/lodash": "^4.14.178",
+    "@types/node": "^16",
+    "@types/qs": "^6.9.7",
+    "@types/tough-cookie": "^4.0.1",
+    "axios": "^0.25.0",
+    "axios-cookiejar-support": "^2.0.4",
+    "form-data": "^4.0.0",
+    "lodash": "^4.17.21",
+    "qs": "^6.10.3",
     "tough-cookie": "^4.0.0"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.11.0",
+    "@typescript-eslint/parser": "^5.11.0",
+    "eslint": "^8.9.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-airbnb-typescript": "^14.0.2",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-import-resolver-typescript": "^2.5.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jest": "^25.7.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.11",
-    "prettier": "^2.0.5"
+    "prettier": "^2.0.5",
+    "ts-node": "^10.5.0",
+    "typescript": "^4.5.5"
   },
   "husky": {
     "hooks": {
